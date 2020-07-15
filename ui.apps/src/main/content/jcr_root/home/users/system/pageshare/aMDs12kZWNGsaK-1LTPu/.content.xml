@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:rep="internal"
+    jcr:primaryType="rep:SystemUser"
+    jcr:uuid="d4ae82ec-697a-3d53-8b4b-b6fd7b55e223"
+    rep:authorizableId="pageshareservice"
+    rep:principalName="pageshareservice"
+    memberAction="memberOf"
+    memberEntry="content-authors"/>

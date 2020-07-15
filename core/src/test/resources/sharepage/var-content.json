@@ -1,0 +1,55 @@
+{
+  "jcr:primaryType": "nt:folder",
+  "jcr:createdBy": "admin",
+  "jcr:created": "Sat Jun 20 2020 00:06:30 GMT+0100",
+  "share": {
+    "jcr:primaryType": "sling:Folder",
+    "jcr:mixinTypes": [
+      "rep:AccessControllable"
+    ],
+    "jcr:createdBy": "admin",
+    "jcr:created": "Sat Jun 20 2020 00:06:30 GMT+0100",
+    "d2072cfe-639b-40dc-8118-18c08045ae01": {
+      "jcr:primaryType": "nt:unstructured",
+      "expirationDate": "2040-06-27T22:29:00.000+01:00",
+      "pagePath": "/content/core-components-examples/library/form/button.share.html",
+      "emailMessage": "test",
+      "emailList": [
+        "cavery@we-retail.net"
+      ],
+      "originalPath": "/content/core-components-examples/library/form/button.html",
+      "assets": {
+        "jcr:primaryType": "nt:unstructured",
+        "1874840739n": {
+          "jcr:primaryType": "nt:unstructured",
+          "assetPath": "/content/core-components-examples/library/form/button/_jcr_content/root/responsivegrid/teaser_556024830.coreimg{.width}.svg/1592607209952/adobe-logo.svg"
+        },
+        "1862668953n": {
+          "jcr:primaryType": "nt:unstructured",
+          "assetPath": "/content/core-components-examples/library/form/button/_jcr_content/root/responsivegrid/teaser_556024830.coreimg.svg/1592607209952/adobe-logo.svg"
+        }
+      }
+    },
+    "e2072cfe-639b-40dc-8118-18c08045ae02": {
+      "jcr:primaryType": "nt:unstructured",
+      "expirationDate": "2010-06-27T22:29:00.000+01:00",
+      "pagePath": "/content/core-components-examples/library/form/button.share.html",
+      "emailMessage": "test",
+      "emailList": [
+        "cavery@we-retail.net"
+      ],
+      "originalPath": "/content/core-components-examples/library/form/button.html",
+      "assets": {
+        "jcr:primaryType": "nt:unstructured",
+        "1874840739n": {
+          "jcr:primaryType": "nt:unstructured",
+          "assetPath": "/content/core-components-examples/library/form/button/_jcr_content/root/responsivegrid/teaser_556024830.coreimg{.width}.svg/1592607209952/adobe-logo.svg"
+        },
+        "1862668953n": {
+          "jcr:primaryType": "nt:unstructured",
+          "assetPath": "/content/core-components-examples/library/form/button/_jcr_content/root/responsivegrid/teaser_556024830.coreimg.svg/1592607209952/adobe-logo.svg"
+        }
+      }
+    }
+  }
+}

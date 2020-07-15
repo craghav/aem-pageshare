@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="cq:Page">
+    <jcr:content
+            jcr:mixinTypes="[sling:VanityPath]"
+            jcr:primaryType="nt:unstructured"
+            jcr:title="AEM Sites | PageShare"
+            sling:resourceType="granite/ui/components/shell/collectionpage"
+            consoleId="cq-sites-pageshare"
+            contentPath="/var/sites/share"
+            currentView="list"
+            modeGroup="cq-admin-pageshare"
+            pageURITemplate="/libs/wcm/core/content/sites.html{+id}"
+            targetCollection=".cq-admin-pageshare">
+        <title
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Share Page (Preview Link)"
+                sling:resourceType="granite/ui/components/shell/title"/>
+        <head jcr:primaryType="nt:unstructured">
+            <clientlibs
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/includeclientlibs"
+                    categories="[pageshare.core]"/>
+        </head>
+        <views jcr:primaryType="nt:unstructured">
+            <list
+                    granite:rel="cq-admin-pageshare"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/table"
+                    itemprop="item"
+                    layoutId="list"
+                    limit="{Long}40"
+                    maximized="{Boolean}true"
+                    modeGroup="cq-admin-pageshare"
+                    path="${requestPathInfo.suffix}"
+                    selectionMode="row"
+                    sortMode="local"
+                    stateId="cq.admin.pageshare">
+                <columns
+                        jcr:primaryType="nt:unstructured"
+                        class="card-cq-pageshare">
+                    <icon
+                            jcr:primaryType="nt:unstructured"
+                            select="{Boolean}true"/>
+                    <originalPath
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="AEM Page Path"
+                            sortable="{Boolean}true"/>
+                    <newPath
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Share Link"
+                            sortable="{Boolean}true"/>
+                    <expirationDate
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Expire Link After"
+                            sortable="{Boolean}true"/>
+                </columns>
+                <datasource
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="/apps/pageshare/components/content/pageshare/datasource"
+                        itemResourceType="/apps/pageshare/components/content/pageshare/row"/>
+            </list>
+        </views>
+        <actions jcr:primaryType="nt:unstructured">
+            <secondary jcr:primaryType="nt:unstructured">
+                <create
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/collection/action"
+                        action="cq-admin.pageshare.action.create"
+                        text="Create"
+                        title="Create"
+                        variant="primary">
+                    <data
+                            jcr:primaryType="nt:unstructured"
+                            href.uritemplate="/apps/pageshare/content/createpagelinkwizard.html?redirect=/apps/pageshare/content/sharepage.html&amp;notemplate=true"/>
+                    <rendercondition
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/renderconditions/privilege"
+                            path="/var/sites/share"
+                            privileges="jcr:addChildNodes"/>
+                </create>
+            </secondary>
+        </actions>
+    </jcr:content>
+    <edit/>
+</jcr:root>

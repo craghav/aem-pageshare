@@ -1,0 +1,12 @@
+#sharepage-adduser, #subjectandexpiration, #message {
+    width: 100%;
+}
+
+.add-new-user-primary-button {
+    padding-left: 10px;
+ }
+
+.emailsubject-name, #sharepage-members td.name {
+     padding-right: 20px;
+}
+

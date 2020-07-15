@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    id="root">
+    <tools
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Tools"
+        id="cq-tools"
+        order="{Long}200">
+        <sites
+            jcr:primaryType="nt:unstructured"
+            jcr:title="Sites"
+            id="cq-tools-sites">
+            <pageshare
+                jcr:description="Share a page link to anonymous user"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Share Page Link (Preview)"
+                href="/apps/pageshare/content/sharepage.html"
+                icon="publish"
+                id="cq-sites-pageshare"/>
+        </sites>
+    </tools>
+</jcr:root>
